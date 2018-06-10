@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">App Name</string>
+    <string name="button1">Aa</string>
+    <string name="button2">Bb</string>
+    <string name="button3">Cc</string>
+    <string name="button4">Dd</string>
+    <string name="button5">Ee</string>
+    <string name="button6">Ff</string>
+    <string name="button7">Gg</string>
+    <string name="button8">Hh</string>
+    <string name="button9">Ii</string>
+    <string name="button10">Jj</string>
+    <string name="button11">Kk</string>
+    <string name="button12">Ll</string>
+    <string name="button13">Mm</string>
+    <string name="button14">Nn</string>
+    <string name="button15">Oo</string>
+    <string name="button16">Pp</string>
+    <string name="button17">Qq</string>
+    <string name="button18">Rr</string>
+    <string name="button19">Ss</string>
+    <string name="button20">Tt</string>
+    <string name="button21">Uu</string>
+    <string name="button22">Vv</string>
+    <string name="button23">Ww</string>
+    <string name="button24">Xx</string>
+    <string name="button25">Yy</string>
+    <string name="button26">Zz</string>
+    <string name="continue1">Start Learning Words!</string>
+</resources>
