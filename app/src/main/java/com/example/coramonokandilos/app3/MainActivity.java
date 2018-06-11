@@ -1,5 +1,6 @@
 package com.example.coramonokandilos.app3;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         defineButtons();
+    }
+
+    public void nextPage(View view) {
+        Intent startNewActivity = new Intent(this, pictureActivity.class);
+        startActivity(startNewActivity);
     }
 
     public void defineButtons() {
