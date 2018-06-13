@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".pictureActivity"></activity>
+        <activity android:name=".PictureUploadActivity" />
+        <activity android:name=".PicturePresentActivity"></activity>
     </application>
 
 </manifest>

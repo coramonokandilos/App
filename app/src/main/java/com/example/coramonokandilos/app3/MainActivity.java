@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextPage(View view) {
-        Intent startNewActivity = new Intent(this, pictureActivity.class);
+        Intent startNewActivity = new Intent(this, PictureUploadActivity.class);
         startActivity(startNewActivity);
     }
 
