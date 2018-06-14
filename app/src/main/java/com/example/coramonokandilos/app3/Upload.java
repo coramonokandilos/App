@@ -1,21 +1,22 @@
 package com.example.coramonokandilos.app3;
 
+
 public class Upload {
     private String mImageUrl;
 
-    public Upload(){
+    public Upload() {
         //empty constructor needed
     }
 
-    public Upload(String imageUrl){
-        mImageUrl = imageUrl ;
+    public Upload(String imageUrl) {
+        mImageUrl = imageUrl;
     }
 
-    public String getmImageUrl(){
+    public String getImageUrl() {
         return mImageUrl;
     }
 
-    public void setmImageUrl(String imageUrl){
+    public void setImageUrl(String imageUrl) {
         mImageUrl = imageUrl;
     }
 }
