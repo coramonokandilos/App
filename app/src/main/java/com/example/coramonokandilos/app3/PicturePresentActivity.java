@@ -42,20 +42,24 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
 
         mUploads = new ArrayList<>();
 
+        mImageAdapter = new ImageAdapter(PicturePresentActivity.this, mUploads);
+        mRecyclerView.setAdapter(mImageAdapter);
+        mImageAdapter.setOnItemClickListener(PicturePresentActivity.this);
+
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
 
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                mUploads.clear();   //this makes sure there aren't duplicates added while uploading is happening
+
                 for(DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Upload upload  = postSnapshot.getValue(Upload.class);
                     mUploads.add(upload);
                 }
 
-                mImageAdapter = new ImageAdapter(PicturePresentActivity.this, mUploads);
-                mRecyclerView.setAdapter(mImageAdapter);
-
-                mImageAdapter.setOnItemClickListener(PicturePresentActivity.this);
+                mImageAdapter.notifyDataSetChanged();
 
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
