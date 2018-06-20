@@ -54,21 +54,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+
+    <Button
         android:id="@+id/show_uploads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="19dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginRight="19dp"
-        android:text="show uploads"
+        android:layout_alignEnd="@+id/image_view"
+        android:layout_below="@+id/progress_bar"
+        android:layout_marginTop="-82dp"
+        android:background="@drawable/round_button_blue"
+        android:drawableTop="@drawable/ic_photo_library_black_24dp"
+        android:paddingTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_upload_image"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintStart_toEndOf="@+id/button_upload_image" />
+
 
 </RelativeLayout>
 
