@@ -74,10 +74,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         @Override
         public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
             contextMenu.setHeaderTitle("Select Action");
-            MenuItem doWhatever = contextMenu.add(Menu.NONE, 1, 1, "Do whatever");
-            MenuItem delete = contextMenu.add(Menu.NONE, 2, 2, "Delete");
+            MenuItem upVote = contextMenu.add(Menu.NONE, 1, 1, "Up Vote");
+            MenuItem downVote = contextMenu.add(Menu.NONE, 2, 2, "Down Vote");
 
-            doWhatever.setOnMenuItemClickListener(this);
+            MenuItem delete = contextMenu.add(Menu.NONE, 3, 3, "Delete");
+
+            upVote.setOnMenuItemClickListener(this);
+            downVote.setOnMenuItemClickListener(this);
             delete.setOnMenuItemClickListener(this);
         }
 
@@ -88,9 +91,11 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 if(position != RecyclerView.NO_POSITION) {
                     switch (menuItem.getItemId()) {
                         case 1:
-                            mListener.onWhateverClick(position);
+                            mListener.onUpVoteClick(position);
                             return true;
                         case 2:
+                            mListener.onDownVoteClick(position);
+                        case 3:
                             mListener.onDeleteClick(position);
                             return true;
                     }
@@ -103,7 +108,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public interface OnItemClickListener {
         void onItemClick(int position);
 
-        void onWhateverClick(int position);
+        void onUpVoteClick(int position);
+
+        void onDownVoteClick(int position);
 
         void onDeleteClick(int position);
     }

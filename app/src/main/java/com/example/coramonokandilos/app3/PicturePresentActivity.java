@@ -90,8 +90,14 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
     }
 
     @Override
-    public void onWhateverClick(int position) {
-        Toast.makeText(this, "Whatever click at position: " + position, Toast.LENGTH_SHORT).show();
+    public void onUpVoteClick(int position) {
+        Toast.makeText(this, "Up vote click at position: " + position, Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onDownVoteClick(int position){
+        Toast.makeText(this, "Down vote click at position: " + position, Toast.LENGTH_SHORT).show();
 
     }
 

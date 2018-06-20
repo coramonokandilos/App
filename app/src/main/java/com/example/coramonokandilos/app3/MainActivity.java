@@ -55,107 +55,107 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.a:
-                    MediaPlayer a = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer a = MediaPlayer.create(getApplicationContext(), R.raw.a);
                     a.start();
                     break;
                 case R.id.b:
-                    MediaPlayer b = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer b = MediaPlayer.create(getApplicationContext(), R.raw.b);
                     b.start();
                     break;
                 case R.id.c:
-                    MediaPlayer c = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer c = MediaPlayer.create(getApplicationContext(), R.raw.c);
                     c.start();
                     break;
                 case R.id.d:
-                    MediaPlayer d = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer d = MediaPlayer.create(getApplicationContext(), R.raw.d);
                     d.start();
                     break;
                 case R.id.e:
-                    MediaPlayer e = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer e = MediaPlayer.create(getApplicationContext(), R.raw.e);
                     e.start();
                     break;
                 case R.id.f:
-                    MediaPlayer f = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer f = MediaPlayer.create(getApplicationContext(), R.raw.f);
                     f.start();
                     break;
                 case R.id.g:
-                    MediaPlayer g = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer g = MediaPlayer.create(getApplicationContext(), R.raw.g);
                     g.start();
                     break;
                 case R.id.h:
-                    MediaPlayer h = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer h = MediaPlayer.create(getApplicationContext(), R.raw.h);
                     h.start();
                     break;
                 case R.id.i:
-                    MediaPlayer i = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer i = MediaPlayer.create(getApplicationContext(), R.raw.i);
                     i.start();
                     break;
                 case R.id.j:
-                    MediaPlayer j = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer j = MediaPlayer.create(getApplicationContext(), R.raw.j);
                     j.start();
                     break;
                 case R.id.k:
-                    MediaPlayer k = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer k = MediaPlayer.create(getApplicationContext(), R.raw.k);
                     k.start();
                     break;
                 case R.id.l:
-                    MediaPlayer l = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer l = MediaPlayer.create(getApplicationContext(), R.raw.l);
                     l.start();
                     break;
                 case R.id.m:
-                    MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.m);
                     m.start();
                     break;
                 case R.id.n:
-                    MediaPlayer n = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer n = MediaPlayer.create(getApplicationContext(), R.raw.n);
                     n.start();
                     break;
                 case R.id.o:
-                    MediaPlayer o = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer o = MediaPlayer.create(getApplicationContext(), R.raw.o);
                     o.start();
                     break;
                 case R.id.p:
-                    MediaPlayer p = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer p = MediaPlayer.create(getApplicationContext(), R.raw.p);
                     p.start();
                     break;
                 case R.id.q:
-                    MediaPlayer q = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer q = MediaPlayer.create(getApplicationContext(), R.raw.q);
                     q.start();
                     break;
                 case R.id.r:
-                    MediaPlayer r = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer r = MediaPlayer.create(getApplicationContext(), R.raw.r);
                     r.start();
                     break;
                 case R.id.s:
-                    MediaPlayer s = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer s = MediaPlayer.create(getApplicationContext(), R.raw.s);
                     s.start();
                     break;
                 case R.id.t:
-                    MediaPlayer t = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer t = MediaPlayer.create(getApplicationContext(), R.raw.t);
                     t.start();
                     break;
                 case R.id.u:
-                    MediaPlayer u = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer u = MediaPlayer.create(getApplicationContext(), R.raw.u);
                     u.start();
                     break;
                 case R.id.v:
-                    MediaPlayer v = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer v = MediaPlayer.create(getApplicationContext(), R.raw.v);
                     v.start();
                     break;
                 case R.id.w:
-                    MediaPlayer w = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer w = MediaPlayer.create(getApplicationContext(), R.raw.w);
                     w.start();
                     break;
                 case R.id.x:
-                    MediaPlayer x = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer x = MediaPlayer.create(getApplicationContext(), R.raw.x);
                     x.start();
                     break;
                 case R.id.y:
-                    MediaPlayer y = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer y = MediaPlayer.create(getApplicationContext(), R.raw.y);
                     y.start();
                     break;
                 case R.id.z:
-                    MediaPlayer z = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    MediaPlayer z = MediaPlayer.create(getApplicationContext(), R.raw.z);
                     z.start();
                     break;
             }
