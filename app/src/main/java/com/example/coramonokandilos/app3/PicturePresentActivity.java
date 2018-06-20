@@ -39,6 +39,7 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.comm_photo);
         setContentView(R.layout.activity_picture_present);
 
         mRecyclerView = findViewById(R.id.recycler_view);

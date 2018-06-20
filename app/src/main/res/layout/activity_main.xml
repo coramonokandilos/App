@@ -25,22 +25,30 @@
                     android:layout_marginRight="40dp"
                     android:layout_marginTop="40dp">
 
-                    <Button
-                        android:id="@+id/a"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:text="@string/button1" />
+                <Button
+                    android:id="@+id/a"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/button1"
+                    android:textColor="#FFFF"
+                    android:textSize="60sp"
+                    android:background="@drawable/button"/>
 
-                    <Button
-                        android:id="@+id/b"
-                        android:layout_width="wrap_content"
-                        android:layout_height="150dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="1"
-                        android:text="@string/button2" />
-                </TableRow>
+                <Button
+                    android:id="@+id/b"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/button2"
+                    android:textColor="#FFFF"
+                    android:textSize="60sp"
+                    android:background="@drawable/button"/>
+            </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -51,6 +59,10 @@
 
                     <Button
                         android:id="@+id/c"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -59,6 +71,10 @@
 
                     <Button
                         android:id="@+id/d"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -75,6 +91,10 @@
 
                     <Button
                         android:id="@+id/e"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -83,6 +103,10 @@
 
                     <Button
                         android:id="@+id/f"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -99,6 +123,10 @@
 
                     <Button
                         android:id="@+id/g"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -107,6 +135,10 @@
 
                     <Button
                         android:id="@+id/h"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -123,6 +155,10 @@
 
                     <Button
                         android:id="@+id/i"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -131,6 +167,10 @@
 
                     <Button
                         android:id="@+id/j"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -147,6 +187,10 @@
 
                     <Button
                         android:id="@+id/k"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -155,6 +199,10 @@
 
                     <Button
                         android:id="@+id/l"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -171,6 +219,10 @@
 
                     <Button
                         android:id="@+id/m"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -179,6 +231,10 @@
 
                     <Button
                         android:id="@+id/n"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -195,6 +251,10 @@
 
                     <Button
                         android:id="@+id/o"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -203,6 +263,10 @@
 
                     <Button
                         android:id="@+id/p"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -219,6 +283,10 @@
 
                     <Button
                         android:id="@+id/q"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -227,6 +295,10 @@
 
                     <Button
                         android:id="@+id/r"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -243,6 +315,10 @@
 
                     <Button
                         android:id="@+id/s"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -251,6 +327,10 @@
 
                     <Button
                         android:id="@+id/t"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -267,6 +347,10 @@
 
                     <Button
                         android:id="@+id/u"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -275,6 +359,10 @@
 
                     <Button
                         android:id="@+id/v"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -291,6 +379,10 @@
 
                     <Button
                         android:id="@+id/w"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -299,6 +391,10 @@
 
                     <Button
                         android:id="@+id/x"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
@@ -317,6 +413,10 @@
 
                     <Button
                         android:id="@+id/y"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_marginRight="20dp"
@@ -325,6 +425,10 @@
 
                     <Button
                         android:id="@+id/z"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFF"
+                        android:textSize="60sp"
+                        android:background="@drawable/button"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_marginLeft="20dp"
