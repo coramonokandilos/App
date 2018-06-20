@@ -48,10 +48,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.x).setOnClickListener(buttonClickListener);
         findViewById(R.id.y).setOnClickListener(buttonClickListener);
         findViewById(R.id.z).setOnClickListener(buttonClickListener);
-
-
-
-
     }
 
     private View.OnClickListener buttonClickListener = new View.OnClickListener() {
@@ -109,6 +105,58 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.m:
                     MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
                     m.start();
+                    break;
+                case R.id.n:
+                    MediaPlayer n = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    n.start();
+                    break;
+                case R.id.o:
+                    MediaPlayer o = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    o.start();
+                    break;
+                case R.id.p:
+                    MediaPlayer p = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    p.start();
+                    break;
+                case R.id.q:
+                    MediaPlayer q = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    q.start();
+                    break;
+                case R.id.r:
+                    MediaPlayer r = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    r.start();
+                    break;
+                case R.id.s:
+                    MediaPlayer s = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    s.start();
+                    break;
+                case R.id.t:
+                    MediaPlayer t = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    t.start();
+                    break;
+                case R.id.u:
+                    MediaPlayer u = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    u.start();
+                    break;
+                case R.id.v:
+                    MediaPlayer v = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    v.start();
+                    break;
+                case R.id.w:
+                    MediaPlayer w = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    w.start();
+                    break;
+                case R.id.x:
+                    MediaPlayer x = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    x.start();
+                    break;
+                case R.id.y:
+                    MediaPlayer y = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    y.start();
+                    break;
+                case R.id.z:
+                    MediaPlayer z = MediaPlayer.create(getApplicationContext(), R.raw.c_letter);
+                    z.start();
                     break;
             }
         }
