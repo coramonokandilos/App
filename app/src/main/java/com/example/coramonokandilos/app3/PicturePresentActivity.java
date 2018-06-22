@@ -1,5 +1,6 @@
 package com.example.coramonokandilos.app3;
 
+import android.content.Intent;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -27,6 +29,8 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
 
     private RecyclerView mRecyclerView;
     private ImageAdapter mImageAdapter;
+
+    private ImageButton mCommentButton;
 
     private ProgressBar mProgressCircle;
 
@@ -50,6 +54,8 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
         mProgressCircle = findViewById(R.id.progress_circle);
 
         mUploads = new ArrayList<>();
+
+        mCommentButton = findViewById(R.id.comment_button);
 
         mImageAdapter = new ImageAdapter(PicturePresentActivity.this, mUploads);
         mRecyclerView.setAdapter(mImageAdapter);
@@ -80,6 +86,13 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
                 Toast.makeText(PicturePresentActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                 mProgressCircle.setVisibility(View.INVISIBLE);
 
+            }
+        });
+
+        mCommentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nextPage();
             }
         });
     }
@@ -126,5 +139,10 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
     protected void onDestroy() {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBListener);
+    }
+
+    public void nextPage() {
+        Intent startNewActivity = new Intent(this, IndividualPictureActivity.class);
+        startActivity(startNewActivity);
     }
 }

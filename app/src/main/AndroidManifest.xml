@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PictureUploadActivity" />
-        <activity android:name=".PicturePresentActivity"></activity>
+        <activity android:name=".PicturePresentActivity" />
+        <activity android:name=".IndividualImageActivity"></activity>
     </application>
 
 </manifest>
