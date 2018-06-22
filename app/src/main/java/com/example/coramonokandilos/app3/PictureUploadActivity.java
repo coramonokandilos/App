@@ -104,7 +104,6 @@ public class PictureUploadActivity extends AppCompatActivity {
         if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
                 && data != null && data.getData() != null) {
             mImageUri = data.getData();
-
             Picasso.with(this).load(mImageUri).into(mImageView);        //load into ImageView
         }
     }
@@ -151,6 +150,7 @@ public class PictureUploadActivity extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(PictureUploadActivity.this, "I am right here", Toast.LENGTH_SHORT).show();
                             Toast.makeText(PictureUploadActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
