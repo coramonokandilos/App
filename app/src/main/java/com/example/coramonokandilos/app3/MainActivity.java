@@ -16,11 +16,6 @@ public class MainActivity extends AppCompatActivity {
         defineButtons();
     }
 
-    public void nextPage(View view) {
-        Intent startNewActivity = new Intent(this, PictureUploadActivity.class);
-        startActivity(startNewActivity);
-    }
-
     public void defineButtons() {
         findViewById(R.id.a).setOnClickListener(buttonClickListener);
         findViewById(R.id.b).setOnClickListener(buttonClickListener);
@@ -161,5 +156,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
+    public void nextPage(View view) {
+        Intent startNewActivity = new Intent(this, PictureUploadActivity.class);
+        startActivity(startNewActivity);
+    }
 
 }

@@ -150,7 +150,6 @@ public class PictureUploadActivity extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(PictureUploadActivity.this, "I am right here", Toast.LENGTH_SHORT).show();
                             Toast.makeText(PictureUploadActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })

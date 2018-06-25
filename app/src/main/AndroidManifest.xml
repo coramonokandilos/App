@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".PictureUploadActivity" />
         <activity android:name=".PicturePresentActivity" />
-        <activity android:name=".IndividualImageActivity"></activity>
+        <activity android:name=".SingleImageActivity"></activity>
     </application>
 
 </manifest>

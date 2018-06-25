@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -27,10 +29,24 @@ import java.util.List;
 
 public class PicturePresentActivity extends AppCompatActivity implements ImageAdapter.OnItemClickListener  {
 
+    private static final int PICK_IMAGE_REQUEST = 1;
+
     private RecyclerView mRecyclerView;
     private ImageAdapter mImageAdapter;
 
-    private ImageButton mCommentButton;
+    /*FOR THE COMMENTING*/
+
+//    private ImageButton mCommentButton;
+//    private RecyclerView commentRecyclerView;
+//    private EditText mCommentEditText;
+//    private ImageButton mSubmitComment;
+//
+//    private List<UserComment> mComments;
+//
+//    private StorageReference mStorageCommentsRef;
+//    private DatabaseReference mDatabaseCommentsRef;
+
+    /*END OF NEW CODE*/
 
     private ProgressBar mProgressCircle;
 
@@ -42,6 +58,9 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        /*THIS IS FOR THE PICTURES*/
+
         super.onCreate(savedInstanceState);
         setTitle(R.string.comm_photo);
         setContentView(R.layout.activity_picture_present);
@@ -55,7 +74,33 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
 
         mUploads = new ArrayList<>();
 
-        mCommentButton = findViewById(R.id.comment_button);
+        /*FOR THE COMMENTING*/
+
+        //new things for buttons start ///////////////////////////////
+//        mCommentButton = findViewById(R.id.comment_button);
+//
+//        mCommentEditText = findViewById(R.id.comment_text);
+//        mSubmitComment = findViewById(R.id.submit_comment);
+//        commentRecyclerView = findViewById(R.id.comment_list);
+//        mComments = new ArrayList<UserComment>();
+//
+//
+//        mCommentButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String enteredComment = mCommentEditText.getText().toString();
+//                if(TextUtils.isEmpty(enteredComment)){
+//                    Toast.makeText(PicturePresentActivity.this, "You must write a comment first", Toast.LENGTH_LONG).show();
+//                    return;
+//                }
+//                UserComment commentObject = new UserComment(enteredComment);
+//                databaseReference.push().setValue(commentObject);
+//                mCommentEditText.setText("");
+//            }
+
+//        });
+
+        //new things for buttons end ///////////////////////////////
 
         mImageAdapter = new ImageAdapter(PicturePresentActivity.this, mUploads);
         mRecyclerView.setAdapter(mImageAdapter);
@@ -89,17 +134,22 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
             }
         });
 
-        mCommentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nextPage();
-            }
-        });
+
+
     }
 
     @Override
     public void onItemClick(int position) {
         Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
+        Upload expandItem = mUploads.get(position);
+        final String expandItemKey = expandItem.getKey();
+
+
+        StorageReference imageRef = mStorage.getReferenceFromUrl(expandItem.getImageUrl());
+
+        Intent intent = new Intent(this, SingleImageActivity.class);
+        intent.putExtra("ID_KEY", expandItemKey);
+        startActivity(intent);
     }
 
     @Override
@@ -141,8 +191,5 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
         mDatabaseRef.removeEventListener(mDBListener);
     }
 
-    public void nextPage() {
-        Intent startNewActivity = new Intent(this, IndividualPictureActivity.class);
-        startActivity(startNewActivity);
-    }
+
 }
