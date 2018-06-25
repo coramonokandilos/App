@@ -3,11 +3,11 @@ package com.example.coramonokandilos.app3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 public class SingleImageActivity extends AppCompatActivity {
@@ -27,47 +26,15 @@ public class SingleImageActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;
 
     /*FOR THE COMMENTING*/
-    
+
     private EditText mCommentEditText;
     private ImageButton mCommentButton;
-    private RecyclerView commentRecyclerView;
+    private TextView commentView;
 
 
-    /*FOR THE COMMENTING*/
-
-
-//
-//    private List<UserComment> mComments;
-//
-//    private StorageReference mStorageCommentsRef;
-//    private DatabaseReference mDatabaseCommentsRef;
-
-    /*END OF NEW CODE*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-        //new things for buttons start ///////////////////////////////
-
-//        mComments = new ArrayList<UserComment>();
-//
-//
-//        mCommentButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String enteredComment = mCommentEditText.getText().toString();
-//                if(TextUtils.isEmpty(enteredComment)){
-//                    Toast.makeText(PicturePresentActivity.this, "You must write a comment first", Toast.LENGTH_LONG).show();
-//                    return;
-//                }
-//                UserComment commentObject = new UserComment(enteredComment);
-//                databaseReference.push().setValue(commentObject);
-//                mCommentEditText.setText("");
-//            }
-
-//        });
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_image);
@@ -81,7 +48,7 @@ public class SingleImageActivity extends AppCompatActivity {
 
         mCommentButton = findViewById(R.id.comment_button);
         mCommentEditText = findViewById(R.id.comment_text);
-        commentRecyclerView = findViewById(R.id.comment_list);
+        commentView = findViewById(R.id.comment_text_view);
 
         mImageView = findViewById(R.id.image_view_upload);
 
@@ -121,6 +88,7 @@ public class SingleImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 uploadComment(itemKey);
+                mCommentEditText.setText("");
             }
         });
     }
@@ -129,6 +97,21 @@ public class SingleImageActivity extends AppCompatActivity {
         if(mCommentEditText != null) {
             String comment = mCommentEditText.getText().toString().trim();
             mDatabaseRef.child(itemKey).child("mComment").setValue(comment); //take the id and set the data to upload file
+
+            DatabaseReference commentRef = FirebaseDatabase.getInstance().getReference("uploads").child(itemKey).child("mComment");
+            commentRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    String comment = dataSnapshot.getValue(String.class);
+                    commentView.setText(comment);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
 
         } else {
             Toast.makeText(this, "No comment written", Toast.LENGTH_SHORT).show();
