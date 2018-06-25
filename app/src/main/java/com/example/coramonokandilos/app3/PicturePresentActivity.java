@@ -34,20 +34,6 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
     private RecyclerView mRecyclerView;
     private ImageAdapter mImageAdapter;
 
-    /*FOR THE COMMENTING*/
-
-//    private ImageButton mCommentButton;
-//    private RecyclerView commentRecyclerView;
-//    private EditText mCommentEditText;
-//    private ImageButton mSubmitComment;
-//
-//    private List<UserComment> mComments;
-//
-//    private StorageReference mStorageCommentsRef;
-//    private DatabaseReference mDatabaseCommentsRef;
-
-    /*END OF NEW CODE*/
-
     private ProgressBar mProgressCircle;
 
     private FirebaseStorage mStorage; //not a reference, but an actual storage variable
@@ -58,8 +44,6 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        /*THIS IS FOR THE PICTURES*/
 
         super.onCreate(savedInstanceState);
         setTitle(R.string.comm_photo);
@@ -73,34 +57,6 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
         mProgressCircle = findViewById(R.id.progress_circle);
 
         mUploads = new ArrayList<>();
-
-        /*FOR THE COMMENTING*/
-
-        //new things for buttons start ///////////////////////////////
-//        mCommentButton = findViewById(R.id.comment_button);
-//
-//        mCommentEditText = findViewById(R.id.comment_text);
-//        mSubmitComment = findViewById(R.id.submit_comment);
-//        commentRecyclerView = findViewById(R.id.comment_list);
-//        mComments = new ArrayList<UserComment>();
-//
-//
-//        mCommentButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String enteredComment = mCommentEditText.getText().toString();
-//                if(TextUtils.isEmpty(enteredComment)){
-//                    Toast.makeText(PicturePresentActivity.this, "You must write a comment first", Toast.LENGTH_LONG).show();
-//                    return;
-//                }
-//                UserComment commentObject = new UserComment(enteredComment);
-//                databaseReference.push().setValue(commentObject);
-//                mCommentEditText.setText("");
-//            }
-
-//        });
-
-        //new things for buttons end ///////////////////////////////
 
         mImageAdapter = new ImageAdapter(PicturePresentActivity.this, mUploads);
         mRecyclerView.setAdapter(mImageAdapter);
@@ -133,9 +89,6 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
 
             }
         });
-
-
-
     }
 
     @Override
@@ -143,9 +96,6 @@ public class PicturePresentActivity extends AppCompatActivity implements ImageAd
         Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
         Upload expandItem = mUploads.get(position);
         final String expandItemKey = expandItem.getKey();
-
-
-        StorageReference imageRef = mStorage.getReferenceFromUrl(expandItem.getImageUrl());
 
         Intent intent = new Intent(this, SingleImageActivity.class);
         intent.putExtra("ID_KEY", expandItemKey);

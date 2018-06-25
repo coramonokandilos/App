@@ -5,6 +5,7 @@ import com.google.firebase.database.Exclude;
 
 public class Upload {
     private String mImageUrl;
+    private String mComment;
     private String mKey;
 
     public Upload() {
@@ -12,8 +13,16 @@ public class Upload {
     }
 
     public Upload(String imageUrl) {
+
         mImageUrl = imageUrl;
+
+//        if (comment.trim().equals("")) {
+//            comment = "";
+//        }
+//
+//        mComment = comment;
     }
+
 
     public String getImageUrl() {
         return mImageUrl;
@@ -22,6 +31,10 @@ public class Upload {
     public void setImageUrl(String imageUrl) {
         mImageUrl = imageUrl;
     }
+
+    public String getmComment() {return mComment;}
+
+    public void setComment(String comment) { mComment = comment;}
 
     @Exclude
     public String getKey(){
